@@ -1,0 +1,5 @@
+{
+  "name": "StockMaster Automation",
+  "description": "An automated stock management tool that processes CSV files, applies a 75% master stock rule, and allows for store-specific updates and price adjustments.",
+  "requestFramePermissions": []
+}
