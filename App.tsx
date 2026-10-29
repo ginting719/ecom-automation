@@ -385,8 +385,8 @@ const App: React.FC = () => {
         const parentEcomData = ecomLookup.get(parentSku);
         const parentFactor = parentEcomData && parentEcomData.factor > 0 ? parentEcomData.factor : 1;
 
-        // Hitung hasil stok dasar/utama (stok utama = Math.floor((stok_utama_riil * 0.75) / factor_utama))
-        const parentDbStock = Math.floor((parentRawStock * 0.75) / parentFactor);
+        // Hitung hasil stok dasar/utama (stok utama = Math.floor((stok_utama_riil * 0.85) / factor_utama))
+        const parentDbStock = Math.floor((parentRawStock * 0.85) / parentFactor);
 
         const factor = ecomData && ecomData.factor > 0 ? ecomData.factor : 1;
         const finalPrice = ecomData && ecomData.price > 0 ? ecomData.price : p.harga_ritel;
@@ -420,7 +420,7 @@ const App: React.FC = () => {
         if (master) {
           matches++;
           const dbPrice = master.harga > 0 ? master.harga : p.harga_ritel;
-          const dbStock = Math.floor(master.stok * 0.75);
+          const dbStock = Math.floor(master.stok * 0.85);
           
           return { 
             ...p, 
